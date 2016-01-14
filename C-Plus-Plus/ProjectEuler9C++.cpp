@@ -11,9 +11,7 @@ int main() {
     int a;
     int b;
     int c;
-    int aa;
-    int bb;
-    int cc;
+
     int p = 3;
     int product;
     while(sum != 1000){
