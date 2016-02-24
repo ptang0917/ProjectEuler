@@ -1,21 +1,29 @@
 #include <iostream>
+#include <cmath>
+
 #include <time.h>
 
 using namespace std;
 
 int findingDivisor(int n) {
 	int count = 0;
-	 cout << "Divisor of  " << n << " is " << endl;
+	 //cout << "Divisor of  " << n << " is " << endl;
 	 //Determine the divisor of that given number n
-	for (int i = 1; i <= n; i++) {
+	for (int i = 1; i <= sqrt(n); i++) {
 		if (n % i == 0) { //If a divisor is found, print the that divisor and increase the count by 1
-			cout << i << endl;  //prints out the divisor 
-			count++; //increase the count
+			//cout << i << endl;  //prints out the divisor 
+			if(i != sqrt(n)){
+				count+=2;
+			}
+			else {
+				count+=1; //increase the count
+			}
 			
+
 			
 		}
 	}
-	cout << "which has  " << count << " divsors " << endl;
+	//cout << "which has  " << count << " divsors " << endl;
 	return count; //returns the how many divsors in the given number n.
 
 }
